@@ -82,7 +82,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="absolute px-12 pt-4 w-full text-white z-10">
+    <div className="absolute px-12 pt-4 w-full text-white z-10 font-noto">
       <div className="flex justify-between items-center">
         <div className="">
           <svg
@@ -108,13 +108,33 @@ export default function Navbar() {
                     setActiveLink(item.name);
                     setOpen(true);
                   }}
-                  onMouseLeave={() => setOpen(false)}
                 >
                   {item.name}
                 </SheetTrigger>
-                <SheetContent>
+                <SheetContent className="w-[45vw] max-w-none">
                   <SheetHeader>
-                    <SheetTitle>A</SheetTitle>
+                    <SheetTitle className="mt-4 pl-6">
+                      <div className="flex justify-between">
+                        <div className="space-x-8 pr-90 text-xl font-bold">
+                          {navlinks.map((item, index) => (
+                            <Link
+                              key={index}
+                              href={item.link}
+                              className="hover:underline hover:underline-offset-8"
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="flex items-center space-x-6 font-bold pr-16">
+                          {iconlinks.map((item, index) => (
+                            <Link key={index} href={item.link}>
+                              {item.icon}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </SheetTitle>
                     <SheetDescription></SheetDescription>
                   </SheetHeader>
                 </SheetContent>

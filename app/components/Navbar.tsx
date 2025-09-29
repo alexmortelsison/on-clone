@@ -69,7 +69,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="absolute px-12 pt-4 w-full">
+    <div className="absolute px-12 pt-4 w-full text-white">
       <div className="flex justify-between items-center">
         <div className="">
           <svg
@@ -86,14 +86,14 @@ export default function Navbar() {
           </svg>
         </div>
         <div className="flex items-center pr-8">
-          <div className="space-x-8 pr-90 text-lg font-semibold">
+          <div className="space-x-8 pr-90 text-xl font-bold">
             {navlinks.map((item, index) => (
               <Link key={index} href={item.link}>
                 {item.name}
               </Link>
             ))}
           </div>
-          <div className="flex items-center space-x-6 font-semibold">
+          <div className="flex items-center space-x-6 font-bold">
             {iconlinks.map((item, index) => (
               <Link key={index} href={item.link}>
                 {item.icon}

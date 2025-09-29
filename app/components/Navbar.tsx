@@ -1,8 +1,21 @@
+"use client";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { link } from "fs";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
+import React, { useState } from "react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState<string | null>(null);
+  const pathname = usePathname();
   const navlinks = [
     { name: "Shop", link: "/shop" },
     { name: "Activities", link: "/activities" },
@@ -69,7 +82,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="absolute px-12 pt-4 w-full text-white">
+    <div className="absolute px-12 pt-4 w-full text-white z-10">
       <div className="flex justify-between items-center">
         <div className="">
           <svg
@@ -88,9 +101,24 @@ export default function Navbar() {
         <div className="flex items-center pr-8">
           <div className="space-x-8 pr-90 text-xl font-bold">
             {navlinks.map((item, index) => (
-              <Link key={index} href={item.link}>
-                {item.name}
-              </Link>
+              <Sheet open={open} onOpenChange={setOpen} key={index}>
+                <SheetTrigger
+                  className="hover:underline-offset-8 hover:underline"
+                  onMouseEnter={() => {
+                    setActiveLink(item.name);
+                    setOpen(true);
+                  }}
+                  onMouseLeave={() => setOpen(false)}
+                >
+                  {item.name}
+                </SheetTrigger>
+                <SheetContent>
+                  <SheetHeader>
+                    <SheetTitle>A</SheetTitle>
+                    <SheetDescription></SheetDescription>
+                  </SheetHeader>
+                </SheetContent>
+              </Sheet>
             ))}
           </div>
           <div className="flex items-center space-x-6 font-bold">

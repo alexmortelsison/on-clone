@@ -21,7 +21,8 @@ export default function ShopByCategory() {
     if (arrowRef.current) {
       gsap.to(arrowRef.current, {
         opacity: 1,
-        duration: 0.2,
+        duration: 0.5,
+        x: 20,
         ease: "power2.out",
       });
     }
@@ -33,6 +34,7 @@ export default function ShopByCategory() {
       gsap.to(arrowRef.current, {
         opacity: 0,
         duration: 0.2,
+        x: -20,
         ease: "power2.out",
       });
     }
@@ -54,11 +56,11 @@ export default function ShopByCategory() {
             onMouseLeave={() => handleMouseLeave(arrow1)}
           />
           <div className="flex justify-between items-center">
-            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8">
+            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
               Shoes
             </p>
             <p
-              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl"
+              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl -translate-x-20"
               ref={arrow1}
             >
               <BiRightArrowAlt />
@@ -76,11 +78,11 @@ export default function ShopByCategory() {
             onMouseLeave={() => handleMouseLeave(arrow2)}
           />
           <div className="flex justify-between items-center">
-            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8">
+            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
               Apparel
             </p>
             <p
-              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl"
+              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl -translate-x-20"
               ref={arrow2}
             >
               <BiRightArrowAlt />
@@ -98,11 +100,11 @@ export default function ShopByCategory() {
             onMouseLeave={() => handleMouseLeave(arrow3)}
           />
           <div className="flex justify-between items-center">
-            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8">
+            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
               Accessories
             </p>
             <p
-              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl"
+              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl -translate-x-20"
               ref={arrow3}
             >
               <BiRightArrowAlt />

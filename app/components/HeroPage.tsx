@@ -13,7 +13,7 @@ export default function HeroPage() {
           On x BEAMS x REI Co-op
         </h1>
         <h2 className="text-3xl">Outdoor gear for stories worth exploring</h2>
-        <button className="bg-white px-8 py-2 text-black rounded-full text-md font-medium tracking-tighter">
+        <button className="bg-white px-8 py-2 text-black rounded-full text-md font-medium tracking-tighter hover:cursor-pointer hover:bg-gray-200">
           Discover the collection
         </button>
       </div>

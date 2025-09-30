@@ -1,4 +1,5 @@
 "use client";
+import { HoverCard, HoverCardContent } from "@/components/ui/hover-card";
 import {
   Sheet,
   SheetContent,
@@ -7,20 +8,30 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { link } from "fs";
+import { HoverCardTrigger } from "@radix-ui/react-hover-card";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 export default function Navbar() {
+  const sideoptionsRef = useRef<HTMLDivElement>(null);
+
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState<string | null>(null);
-  const pathname = usePathname();
   const navlinks = [
     { name: "Shop", link: "/shop" },
     { name: "Activities", link: "/activities" },
     { name: "Explore", link: "/explore" },
   ];
+
+  const hoverLinks = [
+    { name: "Women" },
+    { name: "Men" },
+    { name: "Kids" },
+    { name: "Shop all" },
+    { name: "Featured" },
+    { name: "Best for" },
+  ];
+
   const iconlinks = [
     {
       icon: (
@@ -135,7 +146,47 @@ export default function Navbar() {
                         </div>
                       </div>
                     </SheetTitle>
-                    <SheetDescription></SheetDescription>
+                    <SheetDescription>
+                      <HoverCard>
+                        <HoverCardTrigger>
+                          <div
+                            className="flex flex-col mt-24 text-3xl pl-8 text-black"
+                            ref={sideoptionsRef}
+                          >
+                            {hoverLinks.map((item, index) => (
+                              <Link
+                                key={index}
+                                href={item.name}
+                                className="font-semibold pb-2"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                          <div className="text-lg mt-54 pl-8 text-black">
+                            <p className="pb-2 hover:underline hover:underline-offset-4">
+                              Order Status
+                            </p>
+                            <p className="pb-2 hover:underline hover:underline-offset-4">
+                              On app
+                            </p>
+                            <p className="pb-2 hover:underline hover:underline-offset-4">
+                              Store locator
+                            </p>
+                            <p className="pb-2 hover:underline hover:underline-offset-4">
+                              Refer a friend
+                            </p>
+                            <p className="pb-2 hover:underline hover:underline-offset-4">
+                              Help center
+                            </p>
+                            <p className="pb-2 hover:underline hover:underline-offset-4">
+                              Become a member
+                            </p>
+                          </div>
+                        </HoverCardTrigger>
+                        <HoverCardContent></HoverCardContent>
+                      </HoverCard>
+                    </SheetDescription>
                   </SheetHeader>
                 </SheetContent>
               </Sheet>

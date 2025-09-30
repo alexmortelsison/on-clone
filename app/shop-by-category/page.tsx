@@ -44,14 +44,14 @@ export default function ShopByCategory() {
       <div className="flex font-noto">
         <h1 className="text-5xl tracking-tight font-bold">Shop by category</h1>
       </div>
-      <div className="flex mt-16 justify-center">
+      <div className="flex mt-16 justify-center space-x-8">
         <div className="relative">
           <Image
             src={"/c1.avif"}
             alt="c1"
             width={500}
             height={1000}
-            className="object-cover w-[600px] h-auto px-8 cursor-pointer"
+            className="object-cover w-[550px] h-auto cursor-pointer rounded-lg"
             onMouseEnter={() => handleMouseEnter(arrow1)}
             onMouseLeave={() => handleMouseLeave(arrow1)}
           />
@@ -73,7 +73,7 @@ export default function ShopByCategory() {
             alt="c1"
             width={500}
             height={1000}
-            className="object-cover w-[600px] h-auto px-8 cursor-pointer"
+            className="object-cover w-[550px] h-auto cursor-pointer rounded-lg"
             onMouseEnter={() => handleMouseEnter(arrow2)}
             onMouseLeave={() => handleMouseLeave(arrow2)}
           />
@@ -95,7 +95,7 @@ export default function ShopByCategory() {
             alt="c1"
             width={500}
             height={1000}
-            className="object-cover w-[600px] h-auto px-8 cursor-pointer"
+            className="object-cover w-[550px] h-auto cursor-pointer rounded-lg"
             onMouseEnter={() => handleMouseEnter(arrow3)}
             onMouseLeave={() => handleMouseLeave(arrow3)}
           />

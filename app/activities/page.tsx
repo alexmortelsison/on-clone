@@ -35,7 +35,6 @@ const handleMouseLeave = (arrowElement: HTMLDivElement) => {
 
 export default function ActivitiesPage() {
   const [currentImageSrc, setCurrentImageSrc] = useState(menuLinks[0].src);
-  const bgImage = menuLinks[0].src + 1;
 
   const arrowRefs = useRef<(HTMLDivElement | null)[]>([]);
   const setArrowRef = useCallback(
@@ -56,7 +55,7 @@ export default function ActivitiesPage() {
   };
 
   return (
-    <div className="h-70% px-92 my-8">
+    <div className="h-70% px-92 mt-8 mb-16">
       <div className="flex justify-between">
         <div>
           <h2 className="font-mono text-2xl">Activities</h2>

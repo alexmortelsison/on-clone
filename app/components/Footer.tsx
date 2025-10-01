@@ -95,7 +95,7 @@ export default function Footer() {
           <p className="hover:cursor-pointer">Imprint</p>
           <p className="hover:cursor-pointer">Vulnerability Reporting</p>
         </div>
-        <div className="flex space-x-12">
+        <div className="flex space-x-12 items-center">
           <FaFacebookF />
           <CgInstagram />
           <BsLinkedin />
@@ -113,7 +113,7 @@ export default function Footer() {
               fill="currentColor"
             ></path>
           </svg>
-          <CiYoutube />
+          <CiYoutube className="text-2xl" />
         </div>
       </div>
     </div>

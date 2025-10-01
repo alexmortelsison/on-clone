@@ -10,9 +10,9 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      <div className="w-full px-16 pb-12 flex justify-between">
-        <div className="w-[600px]">
-          <h2 className="text-2xl">
+      <div className="w-full lg:px-16 lg:pb-12 lg:flex lg:justify-between flex flex-col px-4">
+        <div className="lg:w-[600px]">
+          <h2 className="lg:text-2xl text-xl">
             Stay in the loop, with exclusive offers and product previews
           </h2>
           <form
@@ -21,7 +21,7 @@ export default function Footer() {
           >
             Email
           </form>
-          <div className="flex pt-12 gap-x-4">
+          <div className="lg:flex pt-12 gap-x-4 hidden">
             <Image
               src={"/jp.svg"}
               alt="japan"
@@ -32,8 +32,8 @@ export default function Footer() {
             <p>Japan</p>
           </div>
         </div>
-        <div className="flex gap-y-4 w-[900px] justify-between pr-32">
-          <div>
+        <div className="lg:flex gap-y-4 lg:w-[900px] lg:justify-between lg:pr-32 py-8 lg:py-0 lg:mt-8">
+          <div className="space-y-4 lg:space-y-0">
             <div>
               <div className="flex items-center space-x-2">
                 <div className="bg-gray-100 rounded-full p-2">
@@ -65,11 +65,11 @@ export default function Footer() {
                     <path d="M3.732 4.732A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5V14a2.5 2.5 0 0 1-2.5 2.5h-7.293L6.5 21.207V16.5h-1A2.5 2.5 0 0 1 3 14V6.5a2.5 2.5 0 0 1 .732-1.768ZM5.5 5A1.5 1.5 0 0 0 4 6.5V14a1.5 1.5 0 0 0 1.5 1.5h2v3.293l3.293-3.293H18.5A1.5 1.5 0 0 0 20 14V6.5A1.5 1.5 0 0 0 18.5 5h-13ZM8 11V9.5h1V11H8Zm3.5 0V9.5h1V11h-1Zm3.5 0V9.5h1V11h-1Z"></path>
                   </svg>
                 </div>
-                <p>Help & Support</p>
+                <p>Chat</p>
               </div>
             </div>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2 py-8 lg:py-0">
             <p className="hover:underline">Become a member</p>
             <p className="hover:underline">Refer a friend</p>
             <p className="hover:underline">Gift cards</p>
@@ -86,8 +86,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="px-18 flex justify-between items-center py-12">
-        <div className="flex gap-x-8">
+      <div className="lg:px-18 px-4 lg:flex lg:justify-between lg:items-center lg:py-12 flex-col">
+        <div className="lg:flex gap-x-8">
           <p className="hover:cursor-pointer">© On 2025</p>
           <p className="hover:cursor-pointer">Terms & conditions</p>
           <p className="hover:cursor-pointer">Privacy policy</p>
@@ -95,7 +95,7 @@ export default function Footer() {
           <p className="hover:cursor-pointer">Imprint</p>
           <p className="hover:cursor-pointer">Vulnerability Reporting</p>
         </div>
-        <div className="flex space-x-12 items-center">
+        <div className="lg:flex lg:space-x-12 lg:items-center px-4 lg:px-0 flex hidden">
           <FaFacebookF />
           <CgInstagram />
           <BsLinkedin />

@@ -55,17 +55,17 @@ export default function ActivitiesPage() {
   };
 
   return (
-    <div className="h-70% px-92 mt-8 pb-16">
+    <div className="lg:h-70% lg:px-92 lg:mt-8 mt-24 px-8 pb-16">
       <div className="flex justify-between">
         <div>
-          <h2 className="font-mono text-2xl">Activities</h2>
+          <h2 className="font-mono lg:text-2xl text-lg">Activities</h2>
           <div className="flex items-center">
             <div className="pt-4">
               {menuLinks.map((item, index) => (
                 <div key={item.name}>
                   <Link
                     href={"/"}
-                    className="flex text-5xl pb-4 font-semibold items-center"
+                    className="flex lg:text-5xl text-3xl pb-4 font-semibold items-center"
                     onMouseEnter={() =>
                       combinedMouseEnter(arrowRefs.current[index]!, item.src)
                     }
@@ -86,7 +86,7 @@ export default function ActivitiesPage() {
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative hidden lg:flex">
           <Image
             src={currentImageSrc}
             alt={currentImageSrc}

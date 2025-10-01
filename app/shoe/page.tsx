@@ -4,8 +4,8 @@ import ShoeCard from "../components/ShoeCard";
 
 export default function ShoePage() {
   return (
-    <div className="h-[80vh] w-full px-16">
-      <h2 className="text-6xl tracking-tight font-semibold">
+    <div className="lg:h-[80vh] w-full lg:px-16 px-4">
+      <h2 className="lg:text-6xl text-3xl tracking-tight font-semibold">
         You may be interested in
       </h2>
       <div className="pt-8">

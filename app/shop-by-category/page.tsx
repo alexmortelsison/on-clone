@@ -40,9 +40,11 @@ export default function ShopByCategory() {
     }
   };
   return (
-    <div className="h-screen w-full max-w-[95%] mx-auto mt-24 overflow-hidden">
+    <div className="lg:h-screen w-full lg:max-w-[95%] md:px-16 px-8 mx-auto lg:mt-24 mt-16 overflow-hidden">
       <div className="flex font-noto">
-        <h1 className="text-5xl tracking-tight font-bold">Shop by category</h1>
+        <h1 className="lg:text-5xl text-3xl tracking-tight font-bold">
+          Shop by category
+        </h1>
       </div>
       <div className="flex mt-16 justify-center space-x-8">
         <div className="relative">
@@ -51,16 +53,16 @@ export default function ShopByCategory() {
             alt="c1"
             width={500}
             height={1000}
-            className="object-cover w-[550px] h-auto cursor-pointer rounded-lg"
+            className="object-cover md:w-[550px] w-[800px] md:h-auto cursor-pointer rounded-lg"
             onMouseEnter={() => handleMouseEnter(arrow1)}
             onMouseLeave={() => handleMouseLeave(arrow1)}
           />
           <div className="flex justify-between items-center">
-            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
+            <p className="titlecategory opacity-0 absolute lg:bottom-1/16 lg:left-18 lg:text-3xl md:text-xl text-sm bottom-2 left-2 font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
               Shoes
             </p>
             <p
-              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl -translate-x-20"
+              className="absolute lg:bottom-1/16 lg:right-18 bottom-2 right-8 opacity-0 text-white lg:text-4xl md:text-2xl text-sm -translate-x-20"
               ref={arrow1}
             >
               <BiRightArrowAlt />
@@ -73,16 +75,16 @@ export default function ShopByCategory() {
             alt="c1"
             width={500}
             height={1000}
-            className="object-cover w-[550px] h-auto cursor-pointer rounded-lg"
+            className="object-cover md:w-[550px] w-[800px] md:h-auto cursor-pointer rounded-lg"
             onMouseEnter={() => handleMouseEnter(arrow2)}
             onMouseLeave={() => handleMouseLeave(arrow2)}
           />
           <div className="flex justify-between items-center">
-            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
+            <p className="titlecategory opacity-0 absolute lg:bottom-1/16 lg:left-18 lg:text-3xl md:text-xl text-sm bottom-2 left-2 font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
               Apparel
             </p>
             <p
-              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl -translate-x-20"
+              className="absolute lg:bottom-1/16 lg:right-18 bottom-2 right-8 opacity-0 text-white lg:text-4xl md:text-2xl text-sm -translate-x-20"
               ref={arrow2}
             >
               <BiRightArrowAlt />
@@ -95,16 +97,16 @@ export default function ShopByCategory() {
             alt="c1"
             width={500}
             height={1000}
-            className="object-cover w-[550px] h-auto cursor-pointer rounded-lg"
+            className="object-cover md:w-[550px] w-[800px] md:h-auto cursor-pointer rounded-lg"
             onMouseEnter={() => handleMouseEnter(arrow3)}
             onMouseLeave={() => handleMouseLeave(arrow3)}
           />
           <div className="flex justify-between items-center">
-            <p className="titlecategory opacity-0 absolute bottom-1/16 left-18 text-3xl font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
+            <p className="titlecategory opacity-0 absolute lg:bottom-1/16 lg:left-18 lg:text-3xl md:text-xl text-sm bottom-2 left-2 font-semibold text-white hover:underline hover:underline-offset-8 hover:cursor-pointer">
               Accessories
             </p>
             <p
-              className="absolute bottom-1/16 right-18 opacity-0 text-white text-4xl -translate-x-20"
+              className="absolute lg:bottom-1/16 lg:right-18 bottom-2 right-8 opacity-0 text-white lg:text-4xl md:text-2xl text-sm -translate-x-20"
               ref={arrow3}
             >
               <BiRightArrowAlt />

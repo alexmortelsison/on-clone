@@ -19,7 +19,7 @@ export default function ShoeCard({
 }: ShoeCardProps) {
   return (
     <div>
-      <div className="w-[400px] h-[400px] bg-gray-100 relative hover:cursor-pointer">
+      <div className="lg:w-[400px] lg:h-[400px] w-[200px] h-[200px] bg-gray-100 relative hover:cursor-pointer">
         <Image src={imageSrc} alt={name} fill className="object-cover" />
         <div className="absolute right-4 top-4 text-2xl">
           <AiOutlineHeart />

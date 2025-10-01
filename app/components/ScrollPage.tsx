@@ -46,7 +46,7 @@ export default function ScrollPage() {
   );
 
   return (
-    <div className="py-24 pl-24 h-screen max-w-full">
+    <div className="pt-24 pb-24 pl-24 h-70% max-w-full">
       <ScrollArea className="w-full">
         <div className="flex gap-x-8 w-max whitespace-nowrap">
           {photos.map((photo, index) => (

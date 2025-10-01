@@ -55,7 +55,7 @@ export default function ActivitiesPage() {
   };
 
   return (
-    <div className="h-70% px-92 mt-8 mb-16">
+    <div className="h-70% px-92 mt-8 pb-16">
       <div className="flex justify-between">
         <div>
           <h2 className="font-mono text-2xl">Activities</h2>

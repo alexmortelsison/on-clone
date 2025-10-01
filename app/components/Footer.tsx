@@ -10,7 +10,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      <div className="w-full lg:px-16 lg:pb-12 lg:flex lg:justify-between flex flex-col px-4">
+      <div className="w-full lg:px-16 lg:pb-12 lg:flex lg:justify-between px-4">
         <div className="lg:w-[600px]">
           <h2 className="lg:text-2xl text-xl">
             Stay in the loop, with exclusive offers and product previews
@@ -95,7 +95,7 @@ export default function Footer() {
           <p className="hover:cursor-pointer">Imprint</p>
           <p className="hover:cursor-pointer">Vulnerability Reporting</p>
         </div>
-        <div className="lg:flex lg:space-x-12 lg:items-center px-4 lg:px-0 flex hidden">
+        <div className="lg:flex lg:space-x-12 lg:items-center px-4 lg:px-0 hidden">
           <FaFacebookF />
           <CgInstagram />
           <BsLinkedin />

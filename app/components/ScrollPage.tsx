@@ -50,7 +50,10 @@ export default function ScrollPage() {
       <ScrollArea className="w-full">
         <div className="flex gap-x-8 w-max whitespace-nowrap">
           {photos.map((photo, index) => (
-            <div key={index} className="flex-shrink-0  hover:cursor-pointer">
+            <div
+              key={index}
+              className="flex-shrink-0  hover:cursor-pointer pb-8"
+            >
               <div
                 className="relative overflow-hidden rounded-lg"
                 onMouseEnter={() =>
